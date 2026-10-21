@@ -1,0 +1,20 @@
+import styles from './CategoriesCard.module.css';
+import categoryImg from '../../../assets/categoryImg.png';
+
+export function CategoriesCard() {
+    return (
+        <div className={styles.card}>
+            <img
+                src={categoryImg}
+                alt="img"
+                className={styles.cardImage}
+            />
+            <div className={styles.cardHeader}>
+                <h3 className={styles.cardTitle}>Текстиль</h3>
+                <p className={styles.cardArrow}>↗</p>
+
+            </div>
+            <p className={styles.cardDescription}>Мягкость в каждом прикосновении</p>
+        </div>
+    )
+}
