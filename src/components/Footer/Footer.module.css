@@ -1,0 +1,109 @@
+.footer {
+  padding: 64px 0 32px 0;
+  background: #ECEEE7;
+  border-top: 1px solid #DDDCD4;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.footer :global(.container) {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  width: 100%;
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.logoColumn {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logo {
+  color: #2D302B;
+  font-size: 35px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.navColumn {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 140px;
+}
+
+.contactsColumn {
+  width: 216px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.columnTitle {
+  margin: 0;
+  color: #2D302B;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.columnLink {
+  display: block;
+  color: #73766D;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.columnLink:hover {
+  color: #2D302B;
+}
+
+.workingHours {
+  color: #73766D;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.footerBottom {
+  width: 100%;
+  padding-top: 26px;
+  border-top: 1px solid #DDDCD4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright,
+.privacyLink {
+  color: #73766D;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.privacyLink {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.privacyLink:hover {
+  color: #2D302B;
+}

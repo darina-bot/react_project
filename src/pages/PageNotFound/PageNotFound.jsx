@@ -1,0 +1,10 @@
+import s from './PageNotFound.module.css'
+
+export function PageNotFound() {
+    return (
+        <>
+            <h1 className={s.title}>404</h1>
+            <h2 className={s.subtitle}>Page not found</h2>
+        </>
+    )
+}

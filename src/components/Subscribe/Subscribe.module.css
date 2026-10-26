@@ -1,0 +1,119 @@
+.subscribeSection {
+  width: 100%;
+  background: #F0EDE6;
+}
+
+.subscribeSection :global(.container) {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.textContainer {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.sectionTitle {
+  margin: 0;
+  align-self: stretch;
+  color: #2D302B;
+  font-size: 42px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.sectionDescription {
+  margin: 0;
+  align-self: stretch;
+  color: #73766D;
+  font-size: 21px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 31.50px;
+}
+
+.formContainer {
+  width: 780px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.inputGroup {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.emailInput {
+  flex: 1 1 0;
+  height: 62px;
+  padding: 0 22px;
+  background: #FAF9F6;
+  border: none;
+  border-radius: 4px;
+  outline: 1px #DDDCD4 solid;
+  outline-offset: -1px;
+  color: #2D302B;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: outline-color 0.2s ease;
+}
+
+.emailInput:focus {
+  outline-color: #68735B;
+}
+
+.emailInput::placeholder {
+  color: #73766D;
+  opacity: 1;
+}
+
+.submitButton {
+  height: 62px;
+  padding: 0 30px;
+  background: #68735B;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 1px #68735B solid;
+  outline-offset: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  box-sizing: border-box;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+}
+
+.privacyPolicy {
+  margin: 0;
+  align-self: stretch;
+  color: #73766D;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
