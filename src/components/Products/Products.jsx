@@ -19,7 +19,7 @@ export function Products() {
 
         <div className={styles.productsGrid}>
           {
-            products.map((product) => <ProductsCard key={product.id} product={product} />)
+             products.slice(0, 4).map((product) => <ProductsCard key={product.id} product={product} />)
           }
         </div>
 
