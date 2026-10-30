@@ -1,9 +1,37 @@
 import { ProductsCard } from '../../components/Products/ProductsCard/ProductsCard';
 import styles from './CatalogPage.module.css';
 import Search from '../../assets/search.png'
-import { categories, products } from '../../../dist/assets/data';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export function CatalogPage() {
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        (async function load() {
+
+            try {
+                const prodRes = await fetch('http://localhost:3000/products');
+                if (!prodRes.ok) {
+                    throw new Error(`Ошибка ${res.status}: ${res.statusText}`);
+                }
+                const productsFromServer = await prodRes.json();
+                setProducts(productsFromServer);
+                const catRes = await fetch('http://localhost:3000/categories');
+                if (!catRes.ok) {
+                    throw new Error(`Ошибка ${res.status}: ${res.statusText}`);
+                }
+                const categoriesFromServer = await catRes.json();
+                setCategories(categoriesFromServer);
+            } catch (error) {
+                setError(error.message);
+            }
+
+        })();
+    }, []);
+    
     return (
         <div className="container">
             <div className={styles.page}>
@@ -39,10 +67,11 @@ export function CatalogPage() {
                                 <div className={styles.categoryTextActive}>Все товары</div>
                             </div>
                             {
-                                categories.map(category => 
-                                <div className={`${styles.categoryItem} ${styles.categoryItemDefault}`} key={category.id}>
-                                    <div className={styles.categoryTextDefault}>{category.title}</div>
-                                </div>)
+
+                                categories.map(category =>
+                                    <div className={`${styles.categoryItem} ${styles.categoryItemDefault}`} key={category.id}>
+                                        <div className={styles.categoryTextDefault}>{category.title}</div>
+                                    </div>)
                             }
                         </div>
                     </div>

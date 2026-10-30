@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
+    "json-server": "1.0.0-beta.15",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^8.5.0"

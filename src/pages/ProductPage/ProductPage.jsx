@@ -1,14 +1,39 @@
 import styles from './ProductPage.module.css'
-import cardImg from '../../assets/cardImg.png'
 import { useParams } from 'react-router';
-import { categories, products } from '../../../dist/assets/data';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export function ProductPage() {
-   const {id} = useParams();
-    const product = products.find(product => product.id == id);
-    const category = categories.find(category => category.id == product.categoryId);
+  const [product, setProduct] = useState({});
+  const [error, setError] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    (async function load() {
+
+      try {
+        const res = await fetch('http://localhost:3000/products/' + id);
+        if(!res.ok) {
+          throw new Error(`Ошибка ${res.status}: ${res.statusText}`)
+        }
+        const product = await res.json();
+        setProduct(product);
+      } catch (error) {
+        setError(error.message);
+      }
+
+    })();
+  }, [id]);
+
+  if (error) {
+    return <p>Не удалось загрузить товар: {error}</p>
+  }
+  if (!product) {
+    return <p>Товар не найден</p>
+  }
+
   return (
-    
+
     <div className="container">
       <div className={styles.wrapper}>
         <div className={styles.row}>
