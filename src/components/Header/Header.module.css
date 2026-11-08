@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  border-bottom: 1px #DDDCD4 solid;
+}
+
+.headerContainer {
+  align-self: stretch;
+  height: 116px;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.headerLogoBlock {
+  width: 370px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.headerTitle {
+  margin: 0;
+  color: #2D302B;
+  font-size: 35px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.headerSubtitle {
+  color: #73766D;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.headerNav {
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 52px;
+  display: flex;
+}
+
+.headerNavLink {
+  height: 54px;
+  overflow: hidden;
+  border-bottom: 2px #FAF9F6 solid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  color: #2D302B;
+  font-size: 21px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.headerNavLink:hover {
+  border-bottom: 2px #68735B solid;
+  color: #68735B;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.headerContacts {
+  width: 370px;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.headerIconPhone {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerIconInner {
+  width: 16.67px;
+  height: 16.67px;
+  left: 1.67px;
+  top: 1.67px;
+  position: absolute;
+  outline: 1.70px #68735B solid;
+  outline-offset: -0.85px;
+}
+
+.headerPhone {
+  color: #2D302B;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}

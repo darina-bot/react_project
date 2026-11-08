@@ -1,0 +1,27 @@
+.sortSelect {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #2d302b;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.sortBox {
+  width: 410px;
+  height: 64px;
+  padding: 0 22px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 4px;
+  outline: 1px solid #ddddcf;
+  outline-offset: -1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}

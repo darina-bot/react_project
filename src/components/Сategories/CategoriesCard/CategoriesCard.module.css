@@ -1,0 +1,54 @@
+.card {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.cardImage {
+  align-self: stretch;
+  height: 330px;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Эффект легкого увеличения картинки при наведении */
+.card:hover .cardImage {
+  transform: scale(1.02);
+}
+
+.cardHeader {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  margin: 0;
+  color: #2D302B;
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.cardArrow {
+  width: 24px;
+  height: 24px;
+  color: #68735B;
+}
+
+.cardDescription {
+  margin: 0;
+  color: #73766D;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}

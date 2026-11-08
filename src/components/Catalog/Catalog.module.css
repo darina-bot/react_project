@@ -1,0 +1,12 @@
+.products {
+  flex: 1 1 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-content: flex-start;
+}
+
+.products>* {
+  width: 100%;
+}

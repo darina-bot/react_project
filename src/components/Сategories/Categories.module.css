@@ -1,0 +1,58 @@
+.categoriesSection {
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 36px;
+  box-sizing: border-box;
+}
+
+.sectionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #2D302B;
+  font-size: 46px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.allCategoriesLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  color: #68735B;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.allCategoriesLink:hover {
+  opacity: 0.8;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  color: #68735B;
+}
+
+.categoriesGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: flex-start;
+}
